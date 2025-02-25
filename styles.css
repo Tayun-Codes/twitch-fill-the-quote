@@ -1,0 +1,17 @@
+div {
+    display: inline-block;
+    width: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.underlines {
+    border-bottom: black 1px solid;
+    margin-right: 5px;
+}

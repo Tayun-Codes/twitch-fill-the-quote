@@ -1,3 +1,6 @@
 README template.md
 input.js
 *.txt
+node_modules
+.env
+archive

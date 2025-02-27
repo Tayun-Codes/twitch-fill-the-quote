@@ -33,3 +33,6 @@ It's also super fun to debug live and have people celebrate with you when you fi
 Also super useful to pick how different people's minds work and try different solutions!
 
 This mini challenge of mine has made me very excited to continue coding live with the support of my community.
+
+# I DO NOT CLAIM CREDIT FOR COMFY.MIN.JS
+That is entirely developed by [InstaFluff](https://github.com/instafluff) and you can see the full documentation here: [ComfyJS](https://github.com/instafluff/ComfyJS)

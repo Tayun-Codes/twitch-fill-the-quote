@@ -22,16 +22,26 @@ function chooseRandomQuote() {
 }
 
 function displayQuote(quoteletters) {
-  // displays the quote as lines for letters, preserves special characters and spaces
-  quoteLetters.map((a) => {
+    // displays the quote as lines for letters, preserves special characters and spaces
+    quoteLetters.map((a) => {
     letterArray.push(a);
     // console.log(letterArray);
 
     // dynamically creating elements to place each letter in
     let letterBox = document.createElement("div");
     let letter = document.createElement("p");
-    letterBox.setAttribute("class", "underlines");
-    letter.setAttribute("class", "hidden");
+
+    // ensures that only letters, and no spaces or special characters, get hidden and have underlines
+    let regex = /^[a-z]$/i;
+
+    if (a.match(regex)) {
+      letterBox.setAttribute("class", "underlines");
+      letter.setAttribute("class", "hidden");
+    }
+
+    //enables finding matching letters
+    letter.setAttribute("id", index);
+
     letter.innerText = a;
     letterBox.appendChild(letter);
     document.body.appendChild(letterBox);

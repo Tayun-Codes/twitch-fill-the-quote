@@ -76,11 +76,27 @@ function findP(indexes) {
   });
 }
 
+let submittedLetters = [];
+
 //recognizes !letter, ie. !a, commands regardless of case and only one letter at a time
 ComfyJS.onCommand = (user, command, message, flags, extra) => {
   let regex = /^[a-z]$/;
   if (regex.test(command)) {
     console.log(`!${command} was typed in chat`);
+  }
+
+  // checks if letter has already been guessed
+  if (submittedLetters.indexOf(command) >= 0) {
+    document.getElementById(
+      "alert"
+    ).innerText = `'${command}' has already been guessed`;
+  } else { // if letter is new, push to an array that is displayed
+    submittedLetters.push(`${command}`);
+    submittedLetters.sort();
+    document.getElementById(
+      "submittedLetters"
+    ).innerText = `guessed letters: ${submittedLetters}`;
+    getAllIndexes(letterArray, command);
   }
 };
 

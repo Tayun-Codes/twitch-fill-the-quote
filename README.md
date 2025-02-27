@@ -16,6 +16,7 @@ ComfyJS.Init("yourTwitchChannelNameHere");
 ## How It's Made:
 Development was streamed live on [Twitch](https://twitch.tv/parkypark123/) on February 24, 2025 and February 26, 2025.
 This was part of a 10 hour coding challenge made by myself to get over the fear of coding live and in front of other people.
+[Stream Part 1](https://www.twitch.tv/videos/2392790235) | [Part 2 ](https://www.twitch.tv/videos/2392789763)| [Clip](https://www.twitch.tv/parkypark123/clip/InquisitiveModernLettuceBrainSlug-ZaHzkKTgou86_ZVL)
 
 **Tech used:** HTML, CSS, JavaScript, and [ComfyJS](https://github.com/instafluff/ComfyJS) built by [InstaFluff](https://github.com/instafluff) to integrate Twitch's Chat API
 Dynamic document element and attribute population.

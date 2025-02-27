@@ -22,8 +22,8 @@ function chooseRandomQuote() {
 }
 
 function displayQuote(quoteletters) {
-    // displays the quote as lines for letters, preserves special characters and spaces
-    quoteLetters.map((a) => {
+  // displays the quote as lines for letters, preserves special characters and spaces
+  quoteLetters.map((a) => {
     letterArray.push(a);
     // console.log(letterArray);
 
@@ -45,6 +45,34 @@ function displayQuote(quoteletters) {
     letter.innerText = a;
     letterBox.appendChild(letter);
     document.body.appendChild(letterBox);
+  });
+}
+
+// function to find all matching letters from command to quote
+function getAllIndexes(array, command) {
+  array = array.map((a) => a.toLowerCase());
+  let indexes = [];
+  let i = -1;
+  while ((i = array.indexOf(command, i + 1)) != -1) {
+    indexes.push(i);
+  }
+  if (indexes.length < 1) {
+    document.getElementById(
+      "alert"
+    ).innerText = `'${command}' is not in the quote!`;
+  } else {
+    document.getElementById(
+      "alert"
+    ).innerText = `'${command}' is in the quote ${indexes.length} times!`;
+  }
+  findP(indexes);
+}
+
+// for matching indexes, the letter is then displayed on screen
+function findP(indexes) {
+  indexes.forEach((a) => {
+    document.getElementById(a).classList.remove("hidden");
+    document.getElementById(a).parentNode.classList.remove("underlines");
   });
 }
 

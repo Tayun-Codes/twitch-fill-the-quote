@@ -1,0 +1,21 @@
+div {
+    display: inline-block;
+    width: 15px;
+    height: 25px;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.underlines {
+    border-bottom: black 1px solid;
+    margin-right: 2px;
+    margin-left: 2px;
+}
